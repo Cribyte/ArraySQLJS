@@ -1,5 +1,5 @@
 # ArraySQLJS
-Simple Array Administration Tool
+Simple Array Administration Tool with Javascript Chain of Responsibility
 
 ## 1.Embed needed JS File(NodeJS or Client Side) in your project
    ### 1.1 NodeJS
@@ -17,7 +17,19 @@ Simple Array Administration Tool
    ### 3.1 Structure
       Its simple. You just have to call the Object by _() or mj() and set behind a method.
       _(ARRAY_VAR).FUNCTION()
-      mj(ARRAY_VAR.FUNCTION()
+      mj(ARRAY_VAR).FUNCTION()
+      
+      Functions:
+       public select(...params):any[]{}
+       public selectConsole(...params):MinSQLJS {}
+       public selectFor(doing:Function):MinSQLJS{}
+       public delete(index:number, ...args):MinSQLJS {}
+       public update(index:number, value:any):MinSQLJS {}
+       public append(index:number, value:any):MinSQLJS {}
+       public insert(...args):MinSQLJS {}
+       public then(callback:Function){}
+       public appendObject(index:number,obj:any[]):MinSQLJS {}
+       public sort(sort:string = 'asc'):MinSQLJS {}
       
       For example:
          var my_array = ['Hello' , 'World'];
